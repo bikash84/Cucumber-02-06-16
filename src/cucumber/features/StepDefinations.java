@@ -19,19 +19,19 @@ public class StepDefinations {
 	@Given("^I navigate to the facebook website$")
 	public void i_navigate_to_the_facebook_website() throws Throwable {
 		driver = new FirefoxDriver();
-		driver.navigate().to("https://www.facebook.com/");
+		driver.navigate().to("http://202.4.121.75:8085/#/login");
 	}
 
 	@When("^I enter the username$")
 	public void i_enter_the_username() throws Throwable {
-		driver.findElement(By.id("email")).sendKeys("deb83nath@gmail.com");
+		driver.findElement(By.id("username")).sendKeys("admin");
 	    
 	}
 
 	@And("^I enter the password$")
 	public void i_enter_the_password() throws Throwable {
-		driver.findElement(By.id("pass")).sendKeys("bikash_bjit2015");
-		driver.findElement(By.id("u_0_m")).click();
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.id("btn btn-primary col-sm-12 ng-scope")).click();
 	    
 	}
 
